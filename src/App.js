@@ -11,6 +11,9 @@ import NewDataReport from "./pages/NewDataReport";
 import { useEffect, useState } from "react";
 import { setTimeCheckDevice, setTimeOutLogOut } from './commons/SetTime/SetTime';
 import Dashboard from "./pages/Dashboard";
+import PageCreateData from "./pages/PageCreateData";
+import PageImportEvent1 from "./pages/PageCreateData/PageImportEvent1";
+import PageImportEvent2 from "./pages/PageCreateData/PageImportEvent2";
 
 export const history =  createBrowserHistory();
 
@@ -47,6 +50,15 @@ function App() {
       </Route>
       <Route>
         <Route path='/pj/:project_id/ds/:datastore_id/list/all' element={<Datastores />} />
+      </Route>
+      <Route>
+        <Route path='/w/:idWorkspace/pj/:project_id/create_ds' element={<PageCreateData/>} />
+      </Route>
+      <Route>
+        <Route path='/w/:idWorkspace/pj/:project_id/data_source/1' element={<PageImportEvent1/>} />
+      </Route>
+      <Route>
+        <Route path='/w/:idWorkspace/pj/:project_id/data_preview/:collection_id/2' element={<PageImportEvent2/>} />
       </Route>
       {/* <Route>
         <Route path='/pj/:project_id/ds/:datastore_id/settings' element={<SettingDataBase />} />

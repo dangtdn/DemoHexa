@@ -208,12 +208,8 @@ function SlideBar(props) {
             </svg>
           </span>
           <button
-            className="btn-action"
-            onClick={() => {
-              handleRender(5,'');
-            }}
-          >
-            Create a new Database
+            className="btn-action">
+            <Link to={`/w/${localStorage.getItem("workspace_id")}/pj/${localStorage.getItem("project_id")}/create_ds`}>Create a new Database</Link>
           </button>
         </div>
         <div className="menu-item d-flex justify-content-center align-items-center">

@@ -4,6 +4,7 @@ import MainDashboard from '../../components/MainLayout/MainDashboard';
 
 function Dashboard() {
   const [datatoresCurr, setDatastoresCurr] = useState({});
+  const [render, setRender] = useState(1);
 
   return (
     <Fragment>
@@ -12,6 +13,8 @@ function Dashboard() {
     />
     <MainDashboard
     datatoresCurr={datatoresCurr}
+    setRender={setRender}
+    render={render}
     />
     </Fragment>
   )

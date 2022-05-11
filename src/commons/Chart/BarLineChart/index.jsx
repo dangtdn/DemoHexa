@@ -21,7 +21,7 @@ function BarLineChart() {
       Tooltip,
       Legend
   );
-
+    
   const options = {
     responsive: true,
     plugins: {
