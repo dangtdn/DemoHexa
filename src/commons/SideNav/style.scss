@@ -1,0 +1,178 @@
+@import "../../styles/main.scss";
+
+.sidenav-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 30;
+
+    &__left {
+        width: 100%;
+        min-height: 100vh;
+        margin-right: 0px;
+        background-color: rgba(33,33,33,1.0);
+        opacity: 0.48;
+        transition: all 0.3s linear;
+    }
+
+    &__right-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 0px;
+        height: 100%;
+        transition: all 0.3s linear;
+
+        .sidenav-backdrop__right {
+            height: 100%;
+            overflow: hidden;
+            overflow-y: auto;
+
+            &-header {
+                min-height: 64px;
+                line-height: 64px;
+                background-color: c('bgDarkGrey');
+                @include text(fs('h3'), tc('textWhite'), fw('fwExtraLight'), 0);
+    
+                span {
+                    padding: 0px 20px 0px 50px;
+    
+                    .border-icon-user {
+                        padding: 2px 5px;
+                        border: 2px solid #fff;
+                        font-size: fs('body2');
+                    }
+                }
+            }
+
+            &-header.change-theme {
+                background-color: c('bgGreyTheme1');
+                color: tc('textBlack');
+
+                span {
+    
+                    .border-icon-user {
+                        border: 2px solid #000;
+                    }
+                }
+            }
+    
+            .sidenav-backdrop-navbar {
+    
+                .navigation {
+                    height: 48px;
+                    // line-height: 48px;
+                    background-color: c('bgPrimary');
+                    border-bottom: 1px solid bc('borderSecondary');             
+    
+                    .navbar-list {
+                        height: 100%;
+                        outline: none;
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                        margin: 0px 8px;
+                        overflow: hidden;
+                        max-width: 100%;
+                        position: relative;
+    
+                        .nav-item {
+                            height: 100%;
+                            cursor: pointer;
+                            transition: 0.3s;
+                            position: relative;
+    
+                            a {
+                                padding: 12px 16px;
+                                @include text(fs('subtitle2'), tc('textBlack1'), fw('fwLight'), 0);
+                            }
+    
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                bottom: -3px;
+                                left: 0;
+                                width: 100%;
+                                height: 2px;
+                                background-color: c('bgBlue');
+                                opacity: 0;
+                                transition: all 0.2s linear;
+                            }   
+    
+                            &:not(.active):hover:before {
+                                opacity: 0.22;
+                                bottom: 0px;
+                            }
+    
+                            &:not(.active):hover {
+                                color: #333;
+                            }
+                        }
+    
+                        .nav-indicator {
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            height: 2px;
+                            transition: 0.4s;
+                            z-index: 1;
+                            background-color: c('bgBlue');
+                        }
+    
+                        // .nav-item.active {
+                        //     padding: 0px 5px;
+                        //     position: relative;
+    
+                        //     a {
+                        //         height: 100%;
+                        //         @include text(fs('subtitle2'), tc('textBlue'), fw('fwBold'), 0);
+                        //     }
+    
+                        //     &::before {
+                        //         content: '';
+                        //         position: absolute;
+                        //         bottom: 0;
+                        //         left: 0;
+                        //         height: 2px;
+                        //         background-color: c('bgBlue');
+                        //         width: 100%;
+                        //     }   
+                        // }
+                    }
+                }
+            }
+    
+            .sidenav-backdrop-container {
+                padding: 16px;
+                background-color: c('bgPrimary');
+            }
+
+        }
+    }
+}
+
+.sidenav-backdrop.collapse-slide {
+    z-index: 20;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s linear;
+
+    .sidenav-backdrop__left {
+        width: calc(100%-600px);
+        min-height: 100vh;
+        margin-right: 600px;
+        background-color: rgba(33,33,33,1.0);
+        opacity: 0.48;
+    }
+
+    .sidenav-backdrop__right-container {
+        width: 600px;
+        height: 100%;
+    }
+}

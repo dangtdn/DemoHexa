@@ -1,0 +1,81 @@
+@import "../../../styles/main.scss";
+
+.form-password {
+    border-radius: 4px;
+
+    // .form__group {
+    //     position: relative;
+    //     padding-top: 20px;
+    //     margin-bottom: 11px;
+    //     width: 100%;
+
+    //     input {
+    //         border-radius: 0px;
+    //     }
+
+    //     .form__field {
+    //         font-family: inherit;
+    //         width: 100%;
+    //         border: 0;
+    //         border-bottom: 1px solid bc('borderBlueLight');
+    //         outline: 0;
+    //         @include text(fs('subtitle1'), tc('textGreen'), fw('fwExtraLight'), 0);
+    //         padding: 7px 0;
+    //         background: transparent;
+    //         transition: border-color 0.2s;
+          
+    //         &::placeholder {
+    //           color: transparent;
+    //         }
+          
+    //         &:placeholder-shown ~ .form__label {
+    //           font-size: fs('subtitle1');
+    //           cursor: text;
+    //           top: 20px;
+    //         }
+    //     }
+
+    //     .form__field:focus {
+    //       ~ .form__label {
+    //         position: absolute;
+    //         top: 10px;
+    //         display: block;
+    //         transition: 0.2s;
+    //         font-size: 10px;
+    //         color: tc('textGreen');
+    //         font-weight:400;    
+    //         @include text(fs('body1'), tc('textGreenFocus'), fw('fwExtraLight'), 0);
+    //       }
+    //       padding-bottom: 6px;  
+    //       border-width: 3px;
+    //       border-image: linear-gradient(to right, bc('borderBlueLight'));
+    //       border-image-slice: 1;
+    //     }
+        
+    //     /* reset input */
+    //     .form__field{
+    //       &:required,&:invalid { box-shadow:none; }
+    //     }
+    // }
+
+    //   .form__label {
+    //     position: absolute;
+    //     top: 30px;
+    //     display: block;
+    //     transition: 0.2s;
+    //     font-size: fs('subtitle1');
+    //     color: tc('textGreen');
+    //   }
+}
+
+.group-btn {
+
+    button {
+        min-width: 110px;
+        min-height: 36px;
+
+        &:hover {
+            background-color: #ccc;
+        }
+    }
+}

@@ -1,0 +1,114 @@
+@import "../../../styles/main.scss";
+
+.content_wrapper {
+    @include positionFixed(0, 0, 0, 0);
+    background-color: #f3f3f3;
+
+    .login-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 2px 2px 7px #ddd;
+        color: tc('textBlue');
+        background: c('bgPrimary');
+        width: 400px;
+        padding: 50px;
+
+        .box-title {
+            font-size: 20px;
+            font-weight: 400;
+            margin: 0px 0px 50px;
+        }
+
+        .form-login {
+            border-radius: 4px;
+
+            .form__group {
+                position: relative;
+                padding-top: 20px;
+                margin-bottom: 11px;
+                width: 100%;
+
+                input {
+                    border-radius: 0px;
+                }
+                
+                .form__field {
+                    font-family: inherit;
+                    width: 100%;
+                    border: 0;
+                    border-bottom: 1px solid bc('borderBlue');
+                    outline: 0;
+                    @include text(fs('subtitle1'), tc('textBlack'), fw('fwExtraLight'), 0);
+                    padding: 7px 0;
+                    background: transparent;
+                    transition: border-color 0.2s;
+                  
+                    &::placeholder {
+                      color: transparent;
+                    }
+                  
+                    &:placeholder-shown ~ .form__label {
+                      font-size: fs('subtitle1');
+                      cursor: text;
+                      top: 20px;
+                    }
+                }
+                
+                .form__field:focus {
+                  ~ .form__label {
+                    position: absolute;
+                    top: 0;
+                    display: block;
+                    transition: 0.2s;
+                    font-size: 10px;
+                    color: tc('textBlue');
+                    font-weight:400;    
+                    @include text(fs('body1'), tc('btnBlue'), fw('fwExtraLight'), 0);
+                  }
+                  padding-bottom: 6px;  
+                  border-width: 3px;
+                  border-image: linear-gradient(to right, bc('borderBlue'));
+                  border-image-slice: 1;
+                }
+
+                /* reset input */
+                .form__field{
+                  &:required,&:invalid { box-shadow:none; }
+                }
+            }
+
+            .form__label {
+              position: absolute;
+              top: 0;
+              display: block;
+              transition: 0.2s;
+              font-size: fs('body1');
+              color: tc('textBlue');
+            }
+              
+
+            .form-footer {
+                color: tc('textBlack');
+                padding-top: 16px;
+    
+                .link-forget {
+                    @include text(fs('body3'), tc('textPrimary'), fw('fwExtraLight'), 0);
+                    text-decoration: underline;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) and (min-width: 310px){
+    
+    .content_wrapper {
+        
+        .login-wrapper {
+            width: 100%;
+        }
+    }
+}

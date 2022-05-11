@@ -1,0 +1,52 @@
+@import "../../styles/main.scss";
+
+.social {
+    padding-top: 10px;
+
+    &-title {
+        text-align: left;
+        padding: 8px 0px;
+        margin-left: 10px;
+        @include text(fs('h6'), tc('textBlack'), fw('fwExtraLight'), 0);
+    }
+
+    &-body {
+
+        .social-link {
+            height: 50px;
+
+            .link-icon {
+                display: inline-block;
+                border-radius: 50%;
+                width: 100%;
+                max-width: 50px;
+                max-height: 50px;
+                height: 100%;
+            }
+
+            .link-body {
+                text-align: center;
+                flex-direction: column;
+                padding-left: 10px;
+
+                .link-type {
+                    display: block;
+                    @include text(fs('subtitle1'), tc('textBlack'), fw('fwExtraLight'), 0);
+                }
+
+                .link {
+                    display: block;
+
+                    .btn-social-link {
+                        border: 1px solid #dddddd;
+                        border-radius: 8%;
+                        background: none;
+                        height: 22px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+

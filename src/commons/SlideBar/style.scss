@@ -1,0 +1,190 @@
+@import "../../styles/main.scss";
+
+.slidebar {
+    background: c('bgGreen');
+    position: fixed;
+    top: 72px;
+    width: 200px;
+    height: calc(100% - 9%);
+    z-index: 5;
+    transition: all 0.3s linear;
+
+    .slidebar-container {
+        height: 100%;
+        overflow-y: auto;
+    
+        .btn-close__slidebar {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 200px;
+            width: 0px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 0px 4px 4px 0px;
+            background-color: c('bgGreen');
+            color: tc('textGreyIcon');
+            font-size: fs('subtitle3');
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s linear;
+
+            .fa-chevron-left {
+                display: inline-block;
+            }
+            
+            .fa-chevron-right {
+                display: none;
+            }
+        }
+
+        &:hover .btn-close__slidebar {
+            width: 25px;
+            padding: 0px 3px;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .slidebar-menu {
+            overflow: hidden;
+            text-align: left;
+    
+            .item {
+                @include text(fs('body2'), tc('textWhite'), fw('fwBold'), 0);
+                width: 200px;
+                padding: 5px 0px;
+                border-bottom: 1px solid bc('borderBlueLight');
+                overflow: hidden;
+    
+                .menu-btn {
+                    position: relative;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    color: tc('textWhite');
+                    padding: 5px 0px 5px 17px;
+                    transition: color 0.3s;
+                    @include text(fs('body2'), tc('textWhite'), fw('fwBold'), 0);
+                    cursor: pointer; 
+    
+                    &:hover {
+                        color: #4CCEE8;
+                    }
+    
+                    i {
+                        font-size: fs('h5');
+                        margin-right: 10px;
+                    }
+
+                    .icon-arrow-down {
+                        position: absolute;
+                        top: 6px;
+                        left: 5px;
+                        width: 15px;
+                        height: 15px;
+                        min-width: 15px;
+                        min-height: 15px;
+                        cursor: pointer;
+                        transition: transform .3s;
+                        color: #fff;
+                        opacity: 0.3;
+
+                        i {
+                            font-size: 9px;
+                        }
+                    }
+
+                    .icon-settings {
+                        position: absolute;
+                        top: 6px;
+                        right: 0;
+                        margin-right: 3px;
+                        width: 18px;
+                        height: 18px;
+                        min-width: 18px;
+                        min-height: 18px;
+                        color: #fff;
+                        opacity: 0;
+
+                        i {
+                            font-size: 13px;
+                        }
+                    }
+
+                    &:hover .icon-arrow-down, 
+                    &:hover .icon-settings {
+                        opacity: 0.7;
+                    } 
+
+                    &:hover .icon-arrow-down.active {
+                        transform: rotate(-90deg);
+                        top: 1px;
+                        left: 2px;
+                    }
+                }
+
+                ul {
+                    display: block !important;
+                    transition: all .4s;
+                    max-height: 1000px;
+                    margin: 0px 0px 2px;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+
+                    li {
+                        padding: 2px 0px 2px 18px;
+                        line-height: 16px;
+                        transition: all 0.3s linear;
+
+                        a {
+                            @include text(fs('subtitle1'), tc('textWhite'), fw('fwBold'), 0);
+                        }
+
+                        &:hover {
+                            background-color: c('bgGreenHover');
+                        }
+                    }
+
+                    .create-datareport {
+                        
+                        a {
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-content-dashboard,
+    .menu-content-datareport {
+        position: absolute;
+        top: 0;
+        left: 175px;
+        background-color: c('bgPrimary');
+        display: flex;
+        flex-direction: column;
+        padding: 8px 0;
+        max-height: 304px;
+        min-width: 300px;
+        overflow-y: auto;
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 
+                    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 
+                    0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+        // display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s linear;
+    }   
+
+    .menu-content-datareport {
+        padding-left: 8px;
+        top: 185px;
+    }
+
+    .menu-content-dashboard.active,
+    .menu-content-datareport.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "content": {
+        "title": "Login",
+        "title__email": "Email *",
+        "title__password": "Password *",
+        "button-login": "Login",
+        "error": "Email or password Invalid",
+        "link__forgot-password": "Forgot Password?",
+        "choose__language": "Choose your Language"
+    }
+}

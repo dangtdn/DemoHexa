@@ -1,0 +1,30 @@
+@import "../../../styles/main.scss";
+
+.modal {
+
+    .modal-action {
+        min-width: 720px !important;
+        margin-top: 150px;
+
+        .modal-content {
+    
+            .modal-header {
+                background-color: c('bgGrey2') !important;
+                width: 100%;
+                height: 64px;
+                padding: 0px 16px;
+                display: flex;
+                align-items: center !important;
+                justify-content: center !important;
+    
+                .modal-title {
+                    @include text(fs('h5'), tc('textWhite'), fw('fwExtraLight'), 0);
+                }
+            }
+        
+            .modal-body {
+                
+            }
+        }
+    }
+}

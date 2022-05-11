@@ -1,0 +1,84 @@
+// CREATE THEME
+// colors background
+$bgColor: (
+  "bgPrimary": #fff,
+  "bgSecondary": #000,
+  "bgDarkGrey": rgba(0,0,0,0.87),
+  "bgGrey1": rgba(0,0,0,0.87),
+  "bgGrey2": #2D2D2D,
+  "bgGreyLight1": #f3f3f3,
+  "bgGreyLight2": #F8F8F8,
+  "bgGreyLight3": #eee, 
+  "bgGreyTheme1": #E9E9E9, 
+  "bgGreyTheme2": #9E9E9E, 
+  "bgGreyThemeHover": #ABABAB, 
+  "bgBlue": #1589d6, 
+  "bgGreen": #1a536c, 
+  "bgGreenFocus": #226C8D, 
+  "bgGreenHover": #1D5C78,
+  "bgPurple": #734A6F
+);
+
+// colors text
+$textColor: (
+  "textPrimary": #555,
+  "textSecondary": #ccc,
+  "textWhite": #fff,
+  "textBlack": rgba(0,0,0,0.87),
+  "textBlack1": #545454,
+  "textBlack2": #9E9E9E,
+  "textBlue": #1589d6,
+  "textGreyIcon": #6C6C6C,
+  "textGreen": #1a536c,
+  "textGreenFocus": #226C8D,
+  "textRed": #D61212,
+  "textPurple": #734A6F
+);
+
+$btnColor: (
+  "btnWhite": #fff,
+  "btnBlue": #1589D6
+);
+
+$borderColor: (
+  "borderPrimary": #000,
+  "borderSecondary": #555,
+  "borderBlue": #1589D6,
+  "borderBlueLight": #174a60,
+);
+
+// font size
+$fontSize: (
+  "body1": 10px,
+  "body2": 11px,
+  "body3": 12px,
+  "subtitle1": 13px,
+  "subtitle2": 14px,
+  "subtitle3": 15px,
+  "h6": 16px,
+  "h5": 18px,
+  "h4": 25px,
+  "h3": 28px,
+  "h2": 32px,
+  "h1": 42px,
+);
+
+//fonts weight
+$fontWeight: (
+  "fwBlack": 900,
+  "fwBold": 700,
+  "fwMedium": 600,
+  "fwRegular": 500,
+  "fwExtraLight": 400,
+  "fwLight": 300,
+);
+
+//spacing
+$spacing: 10px;
+
+$breakPoint: (
+  "extraLarge": 1200px,
+  "large": 992px,
+  "medium": 768px,
+  "small": 576px,
+);

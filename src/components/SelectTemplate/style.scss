@@ -1,0 +1,122 @@
+@import "../../styles/main.scss";
+
+.template {
+    margin-top: 40px;
+
+    .title {
+        padding-bottom: 8px;
+        @include text(fs('subtitle1'), tc('textBlack'), fw('fwLight'), 0);
+    }
+
+    .template-main {
+
+        .md-tabs-wrapper {
+            // height: 100%;
+            border: 2px solid #ddd;
+            border-bottom: 0px;
+
+            .md-tabs-menu {
+                // height: 100%;
+                background-color: c('bgPrimary');           
+
+                .navbar-list {
+                    // height: 100%;
+                    outline: none;
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    margin: 0px 8px;
+                    overflow: hidden;
+                    max-width: 100%;
+                    position: relative;
+
+                    .md-nav-item {
+                        // height: 100%;
+                        padding: 7px 25px;
+                        cursor: pointer;
+                        transition: 0.3s;
+                        position: relative;
+
+                        .nav-link {
+                            // line-height: 48px;
+
+                            span {
+                                font-size: fs('h5');
+                                padding-right: 10px;
+                            }
+                        }
+
+                        a {
+                            padding: 0px 16px;
+                            @include text(fs('subtitle2'), tc('textBlack1'), fw('fwLight'), 0);
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            bottom: -3px;
+                            left: 0;
+                            width: 100%;
+                            height: 2px;
+                            background-color: c('bgBlue');
+                            opacity: 0;
+                            transition: all 0.2s linear;
+                        }   
+
+                        // &:not(.active):hover:before {
+                        //     opacity: 0.22;
+                        //     bottom: 0px;
+                        // }
+
+                        &:not(.active):hover {
+                            color: #333;
+                        }
+                    }
+
+                    .md-nav-indicator {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        height: 2px;
+                        transition: 0.4s;
+                        z-index: 1;
+                        background-color: c('bgBlue');
+                    }
+                }
+            }
+        }
+
+        .template-content {
+            height: 260px;
+            overflow-y: auto;
+            border: 2px solid #ddd;
+
+            .container {
+
+                .item {
+                    width: 180px;
+                    height: 180px;
+                    margin: 4px 12px 15px 0;
+                    word-wrap: break-word;
+                    border: 2px solid #ddd;
+                    cursor: pointer;
+                    transition: all 0.5s linear;
+
+                    &:hover {
+                        border: 2px solid bc('borderSecondary');
+                    }
+
+                    .item-title {
+                        padding: 18px 17px;
+                        @include text(fs('body3'), tc('textBlack1'), fw('fwBold'), 0);
+                    }
+
+                    .item-content {
+                        padding: 18px 17px;
+                        @include text(fs('body1'), tc('textBlack2'), fw('fwLight'), 0);
+                    }
+                }
+            }
+        }
+    }
+}

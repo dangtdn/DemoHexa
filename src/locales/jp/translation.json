@@ -1,0 +1,11 @@
+{
+    "content": {
+        "title": "ログイン",
+        "title__email": "eメールアドレス *",
+        "title__password": "パスワード *",
+        "button-login": "ログイン",
+        "error": "メールアドレスまたはパスワードが違います",
+        "link__forgot-password": "パスワードを忘れた方はこちら",
+        "choose__language": " 言語を選択できます "
+    }
+}
