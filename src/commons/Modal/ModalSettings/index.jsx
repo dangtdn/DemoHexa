@@ -39,16 +39,12 @@ function ModalSettings(props) {
 
   const navWithUnderline = () => {
     const items = document.querySelectorAll('.md-nav-item');
-    // if (items) {
-      items.forEach((item) => {
-        item.addEventListener('click', function (e) {
-          handleIndicator(e.path[1]);
-        });
-        item.classList.contains('active') && handleIndicator(item);
+    items.forEach((item) => {
+      item.addEventListener('click', function (e) {
+        handleIndicator(e.path[1]);
       });
-    // } else {
-    //   setPage(1);
-    // }
+      item.classList.contains('active') && handleIndicator(item);
+    });
   };
 
   const addActive = (id) => {
