@@ -1,0 +1,93 @@
+@import "../../../styles/main.scss";
+
+form {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+
+    .form-select-filter {
+        position: relative;
+        // width: 150px;
+        // max-width: 200px;
+
+        .select-filter {
+            
+            .group-select-filter {
+                cursor: pointer;
+                width: 100%;
+                background-color: c('bgPrimary');
+                @include text(fs('subtitle1'), tc('textBlack'), fw('fwLight'), 0);
+                padding: 7px;
+                border-radius: 4px;
+    
+                .selected-info {
+                    display: inline-block;
+                    margin-right: 25px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;   
+                }
+            }
+
+            .select-filter-actions {
+                
+                button {
+                    min-width: 24px !important;
+                    min-height: 24px !important;
+                    background: transparent;
+                }
+            }
+        }
+
+        .select-filter-container {
+            position: absolute;
+            top: 18px;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s linear;
+
+            .list-select-filter {
+                min-width: 136px;
+                min-height: 48px;
+                max-height: 256px;
+                overflow-y: auto;
+                background-color: c('bgPrimary');
+                box-shadow: 0px 1px 3px 0px #00000033, 
+                            0px 1px 1px 0px #00000033, 
+                            0px 2px 1px -1px #3e3e3e14;
+                
+                .item {
+                    display: block;
+                    cursor: pointer;
+                    text-align: left;
+                    @include text(fs('subtitle1'), tc('textBlack1'), fw('fwLight'), 0);
+                    padding: 16px;
+                    white-space: nowrap;
+                    transition: all 0.3s linear;
+
+                    &:hover {
+                        background-color: rgba(158,158,158,0.10);
+                    }
+                }
+            }
+        }
+
+        .select-filter-container.collapse-select {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .form-content {
+        margin-bottom: 15px;
+    }
+
+    .footer-btn {
+        padding: 10px 15px 0px 15px;
+    }
+
+    .invalid-feedback, .invalid-tooltip {
+        position: initial;
+    }
+}

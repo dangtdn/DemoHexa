@@ -6,6 +6,7 @@ import { Modal, ModalHeader, ModalBody } from 'reactstrap'
 import FormAction from '../../../components/Form/FormAction';
 import FormChart from '../../../components/Form/FormChart';
 import FormDashboard from '../../../components/Form/FormDashboard';
+import FormDataFilter from '../../../components/Form/FormDataFilter';
 import FormProject from '../../../components/Form/FormProject';
 import FormWorkspace from '../../../components/Form/FormWorkspace';
 import { getTemplate } from '../../../redux/actions/WorkspaceAction';
@@ -32,6 +33,16 @@ function ModalFormAction(props) {
   }
 
   const renderForm = () => {
+    if (data.type === 3) {
+      return (
+        <FormDataFilter
+          showModal={props.showModal}
+          data={data}
+          isEdit={isEdit}
+          isDisable={isDisable}
+          />
+      )
+    }
     if (data.type === 4) {
       return (
         <FormWorkspace

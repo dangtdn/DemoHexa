@@ -130,7 +130,9 @@ function Template2(props) {
       <div className="item-list-view">
         <div className="item-header d-flex justify-content-between align-items-end">
           <div className="data-filter d-flex justify-content-left">
-            <div className="data-filter-group d-flex justify-content-left align-items-center">
+            <div className="data-filter-group d-flex justify-content-left align-items-center"
+            onClick={() => props.showModalForm()}
+            >
               <span className="size-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

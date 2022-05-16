@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
+import ModalFormAction from '../../../commons/Modal/ModalFormAction';
 import SlideBar from '../../../commons/SlideBar';
 import { getPaginationWithSearch } from '../../../redux/actions/DatastoresAction';
 import Template2 from '../../TemplateProject/Template2';
@@ -9,7 +10,22 @@ import './style.scss'
 function MainDatastores(props) {
 
     const {datatoresCurr} = props;
+    const [data, setData] = useState({
+        type: 0,
+        title: ''
+    });
+    const [isShow, setIsShow] = useState(false);
     const dispatch = useDispatch();
+  
+    const showModal = () => setIsShow(!isShow);
+  
+    const showModalForm = () => {
+      setIsShow(!isShow);
+      setData({
+        type: 3,
+        title: 'Data Filter'
+      });
+    };
   
     const handeRenderTable = (item) => {
       console.log(item)
@@ -57,8 +73,15 @@ function MainDatastores(props) {
               </span>
             </div>
           </div>
-          <Template2/>
+          <Template2
+          showModalForm={showModalForm}
+          />
         </div>
+        <ModalFormAction
+          isShow={isShow}
+          showModal={showModal}
+          data={data}
+        />
     </div>
   );
 }
