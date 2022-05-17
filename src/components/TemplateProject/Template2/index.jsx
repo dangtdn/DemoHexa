@@ -28,9 +28,9 @@ function Template2(props) {
       });
       // setData(tables.items);
       setColumns(columns);
-      console.log('col: ',tables.items)
+      // console.log('col: ',tables.items)
     }
-    console.log('col: ',columns)
+    console.log('col table: ',columns[0]["width"]);
   }, [tables]);
 
   useEffect(() => {
@@ -51,6 +51,7 @@ function Template2(props) {
         }
         arr.push(values);
       })
+      // console.log('data table: ' ,arr[0]);
       setData(arr);
     }
   }, [columns]);
@@ -73,8 +74,19 @@ function Template2(props) {
         arr.push(values);
       })
       setDataCSV(arr);
+      // handleChangeTable(1);
     }
   }, [columns, data]);
+
+  const handleChangeTable = (num) => {
+    const title = columns[num].accessor;
+    data.forEach(item => {
+      delete item[title]
+    });
+    columns.splice(num, 1);
+    console.log('arr1', columns);
+    console.log('arr2', data);
+  }
 
   const convertArrayOfObjectsToCSV = args => {  
     const data = args.data;
@@ -122,8 +134,6 @@ function Template2(props) {
     link.setAttribute('download', filename);
     link.click();
   }
-  
-  
 
   return (
     <div className="item-contents">

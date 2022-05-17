@@ -14,7 +14,7 @@ function Datastores() {
     <MainDatastores
     datatoresCurr={datatoresCurr}
     />
-    <ItemViewSideNav/>
+    {/* <ItemViewSideNav/> */}
     </Fragment>
   )
 }

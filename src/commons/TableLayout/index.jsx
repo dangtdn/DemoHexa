@@ -3,7 +3,7 @@ import { Table } from 'reactstrap'
 import { useTable, useBlockLayout, useResizeColumns } from 'react-table'
 
 function TableLayout(props) {
-    const { columns, data, template } = props;
+    const { columns, data } = props;
 
     const defaultColumn = React.useMemo(
       () => ({
