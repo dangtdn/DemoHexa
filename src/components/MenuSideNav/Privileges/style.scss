@@ -1,0 +1,57 @@
+@import "../../../styles/main.scss";
+
+.accesskey-container {
+    text-align: left;
+
+    .accesskey {
+
+        .accesskey-list {
+
+            .title {
+                @include text(fs('subtitle1'), tc('textBlack'), fw('fwBold'), 0);
+            }
+
+            .list-top__my-accesskey,
+            .list-bottom__group-accesskey {
+                border-bottom: 1px solid bc('borderSecondary');
+                
+                .item {
+                    display: inline-block;
+                    padding: 1px 10px 1px 6px;
+                    @include text(fs('body3'), tc('textWhite'), fw('fwExtraLight'), 0);
+                    border-radius: 200px;
+
+                    span {
+                        font-size: fs('body1');
+                        margin-left: 3px;
+                    }
+                }
+            }
+
+            .list-top {
+                
+                .list-top__my-accesskey {
+                    padding: 15px;
+
+                    .item {
+                        background-color: c('bgBlue');
+                    }
+                }
+            }
+
+            .list-bottom {
+                padding-top: 15px;
+                
+                .list-bottom__group-accesskey {
+                    padding: 5px 15px 15px 15px;
+
+                    .item {
+                        margin-top: 10px;
+                        margin-right: 10px;
+                        background-color: #E87DA3;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@import "../../../styles/main.scss";
+
+form {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+
+    .form-content {
+        margin-bottom: 15px;
+    }
+
+    .footer-btn {
+        padding: 10px 15px 0px 15px;
+    }
+
+    .invalid-feedback, .invalid-tooltip {
+        position: initial;
+    }
+}

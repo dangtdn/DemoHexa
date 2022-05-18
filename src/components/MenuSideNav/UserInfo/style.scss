@@ -1,0 +1,46 @@
+@import "../../../styles/main.scss";
+
+.user-info {
+    padding: 8px;
+
+    &__left {
+        
+        .avatar-user {
+        }
+    }
+
+    &__right {
+        text-align: left;
+        @include text(fs('body1'), tc('textBlack'), fw('fwLight'), 0);
+
+        form {
+
+            .form-group {
+            
+                .input-username {
+                    font-size: fs('body3');
+                    color: #000;
+                    font-weight: 500;
+                }
+    
+                input {
+                    font-size: fs('body2');
+                    background-color: transparent;
+                    border: none;
+                    border-radius: 0;
+                    border-bottom: 1px solid bc('borderSecondary');
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    .group-btn {
+
+        button {
+            min-width: 110px;
+            min-height: 36px;
+            border: none;
+        }
+    }
+}

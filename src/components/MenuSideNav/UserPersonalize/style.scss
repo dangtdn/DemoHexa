@@ -1,0 +1,39 @@
+@import "../../../styles/main.scss";
+
+.form-personalize {
+    padding: 8px 10px;
+    text-align: left;
+
+    .title {
+        @include text(fs('h6'), tc('textBlack'), fw('fwLight'), 0);
+
+        span {
+            color: tc('textBlack2');
+        }
+    }
+
+    .info {
+        font-size: fs('body3');
+        margin: 10px 0px 7px 0px;
+    }
+
+    .form-check {
+        margin-left: 20px;
+
+        &-input {
+            width: 15px !important;
+            height: 15px !important;
+        }
+
+        &-label {
+            font-size: fs('subtitle1');
+            color: #000 !important;
+        }
+    }
+
+    .select-container {
+        min-width: 50px;
+        max-width: 130px;
+        margin-left: 20px;
+    }
+}
