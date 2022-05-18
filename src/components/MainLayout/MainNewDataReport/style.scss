@@ -41,6 +41,7 @@ li {
             }
 
             .settings {
+                cursor: pointer;
                 @include text(fs('h5'), tc('textGreyIcon'), fw('fwLight'), 0);
             }
 
