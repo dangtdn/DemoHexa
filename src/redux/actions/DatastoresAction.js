@@ -23,3 +23,22 @@ export const getPaginationWithSearch = (data) => {
         })
     };
 };
+
+export const getTemplates = async (project_id, workspace_id) => {
+
+    const response = await datastoresServices.getTemplates(project_id, workspace_id);
+    return response;
+};
+
+export const createDatastoreFromTemplate = async (data) => {
+    // {
+    //   "user_id": "62294f8fa7311bddd6de4ffb",
+    //   "workspace_id": "622f7faecea395f291e92637",
+    //   "project_id": "6232fcacbb2a43687934cb76",
+    //   "template_name": "GROUPTREE",
+    //   "lang_cd": "en"
+    // }
+    const response = await datastoresServices.createDatastoreFromTemplate(data);
+
+    return response;
+};

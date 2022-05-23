@@ -1,0 +1,19 @@
+
+
+.content-grid {
+    display: grid;
+    background-color: transparent;
+    grid-template-columns: repeat(10, 84px);
+    grid-template-rows: repeat(10, 50px);
+    gap: 10px;
+  }
+  
+  .content-grid .group-input {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* grid-area: calc(var(--row) + 1) / calc(var(--col) +1) /
+      calc(var(--sizeRow) + 1) / calc(var(--sizeCol) +1); */
+    grid-column: calc(var(--col) +1) / calc(var(--sizeCol)+ var(--col) + 1);
+    grid-row: calc(var(--row) + 1) / calc(var(--sizeRow) + var(--row) + 1);
+  }
